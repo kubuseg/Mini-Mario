@@ -413,8 +413,9 @@ GameObject:
   - component: {fileID: 932260495}
   - component: {fileID: 932260497}
   - component: {fileID: 932260496}
+  - component: {fileID: 932260498}
   m_Layer: 5
-  m_Name: End Screen
+  m_Name: LostScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -480,6 +481,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932260494}
   m_CullTransparentMesh: 1
+--- !u!114 &932260498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932260494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7ebe4e495ece84994b18d2312a9770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1051742493
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,7 +586,7 @@ GameObject:
   - component: {fileID: 1790905717}
   - component: {fileID: 1790905716}
   m_Layer: 5
-  m_Name: Restart Button
+  m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,7 +656,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1790905717}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 932260498}
+        m_TargetAssemblyTypeName: RestartScript, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1790905717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,8 +681,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 6522f30e342599e4e9dd4cc2cc03c830, type: 2}
-  m_Color: {r: 0.39215687, g: 0.91764706, b: 1, a: 1}
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16429335, g: 0.3535254, b: 0.49056602, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -762,7 +787,7 @@ GameObject:
   - component: {fileID: 2126835497}
   - component: {fileID: 2126835496}
   m_Layer: 5
-  m_Name: End Text
+  m_Name: EndText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
