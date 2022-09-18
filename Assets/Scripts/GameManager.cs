@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Lost Scene");
     }
 
-    public void CompleteLevel()
+    public void GoToNextLevel()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
